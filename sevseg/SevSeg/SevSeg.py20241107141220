@@ -1,0 +1,184 @@
+﻿#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# -*- Python -*-
+
+# <rtc-template block="description">
+"""
+ @file SevSeg.py
+ @brief ModuleDescription
+ @date $Date$
+
+
+"""
+# </rtc-template>
+
+import sys
+import time
+sys.path.append(".")
+
+# Import RTM module
+import RTC
+import OpenRTM_aist
+import serial  # Arduinoとのシリアル通信に使用
+
+# This module's specification
+sevseg_spec = ["implementation_id", "SevSeg", 
+         "type_name",         "SevSeg", 
+         "description",       "ModuleDescription", 
+         "version",           "1.0.0", 
+         "vendor",            "Nishimura Shunsei", 
+         "category",          "Category", 
+         "activity_type",     "STATIC", 
+         "max_instance",      "1", 
+         "language",          "Python", 
+         "lang_type",         "SCRIPT",
+         ""]
+
+# <rtc-template block="component_description">
+##
+# @class SevSeg
+# @brief ModuleDescription
+# 
+# 
+# </rtc-template>
+class SevSeg(OpenRTM_aist.DataFlowComponentBase):
+    
+    ##
+    # @brief constructor
+    # @param manager Manager Object
+    # 
+    def __init__(self, manager):
+        OpenRTM_aist.DataFlowComponentBase.__init__(self, manager)
+
+        # TimedBooleanSeq型のInPort
+        self._d_Signal = OpenRTM_aist.instantiateDataType(RTC.TimedBooleanSeq)
+        self._SignalIn = OpenRTM_aist.InPort("Signal", self._d_Signal)
+        self.addInPort("Signal", self._SignalIn)
+
+        # Arduinoとのシリアル通信設定
+        try:
+            self.serialPort = serial.Serial('COM4', 9600, timeout=1)
+            print("Connected to Arduino on COM4.")
+        except serial.SerialException as e:
+            print(f"Error opening COM4: {e}")
+            self.serialPort = None
+
+        # 前回送信したデータを保持
+        self.previous_signal = None
+
+    
+    ##
+    #
+    # The initialize action (on CREATED->ALIVE transition)
+    # 
+    # @return RTC::ReturnCode_t
+    # 
+    #
+    def onInitialize(self):
+        # InPortをバインドする（すでに初期化されているので再設定は不要）
+        return RTC.RTC_OK
+    
+    ##
+    #
+    # The activated action (Active state entry action)
+    #
+    # @param ec_id target ExecutionContext Id
+    # 
+    # @return RTC::ReturnCode_t
+    #
+    #
+    def onActivated(self, ec_id):
+        print("SevSeg activated.")
+        return RTC.RTC_OK
+
+    ##
+    #
+    # The execution action that is invoked periodically
+    #
+    # @param ec_id target ExecutionContext Id
+    #
+    # @return RTC::ReturnCode_t
+    #
+    #
+    def onExecute(self, ec_id):
+        # Check if data is available on the InPort
+        if self._SignalIn.isNew():
+            # Read the Boolean data
+            self._d_Signal = self._SignalIn.read()
+
+            # Access the data part of the TimedBooleanSeq
+            signal_data = self._d_Signal.data
+
+            # デバッグ用: 受信したデータを表示
+            print(f"Received Signal array: {signal_data}")
+
+            # データが正しいか確認し、前回と異なる場合のみ送信
+            if len(signal_data) == 2 and signal_data != self.previous_signal:
+                # Arduinoに送信
+                if self.serialPort and self.serialPort.is_open:
+                    if signal_data == [False, False]:
+                        self.serialPort.write(b'0')
+                    elif signal_data == [False, True]:
+                        self.serialPort.write(b'1')
+                    elif signal_data == [True, False]:
+                        self.serialPort.write(b'2')
+                    elif signal_data == [True, True]:
+                        self.serialPort.write(b'3')
+                    print(f"Sent to Arduino: {signal_data}")
+                
+                    # 前回送信したデータを更新
+                    self.previous_signal = signal_data
+                else:
+                    print("Serial port not available.")
+            else:
+                print(f"No new data or data is the same as previous: {signal_data}")
+        return RTC.RTC_OK
+
+
+
+    ##
+    #
+    # The deactivated action (Active state exit action)
+    #
+    # @param ec_id target ExecutionContext Id
+    #
+    # @return RTC::ReturnCode_t
+    #
+    #
+    def onDeactivated(self, ec_id):
+        if self.serialPort and self.serialPort.is_open:
+            self.serialPort.close()
+            print("Serial port closed.")
+        return RTC.RTC_OK
+
+
+def SevSegInit(manager):
+    profile = OpenRTM_aist.Properties(defaults_str=sevseg_spec)
+    manager.registerFactory(profile,
+                            SevSeg,
+                            OpenRTM_aist.Delete)
+
+def MyModuleInit(manager):
+    SevSegInit(manager)
+
+    # create instance_name option for createComponent()
+    instance_name = [i for i in sys.argv if "--instance_name=" in i]
+    if instance_name:
+        args = instance_name[0].replace("--", "?")
+    else:
+        args = ""
+  
+    # コンポーネントの作成
+    comp = manager.createComponent("SevSeg" + args)
+
+def main():
+    # remove --instance_name= option
+    argv = [i for i in sys.argv if not "--instance_name=" in i]
+    # Managerの初期化
+    mgr = OpenRTM_aist.Manager.init(argv)
+    mgr.setModuleInitProc(MyModuleInit)
+    mgr.activateManager()
+    mgr.runManager()
+
+if __name__ == "__main__":
+    main()

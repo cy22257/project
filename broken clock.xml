@@ -1,0 +1,1604 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rts:RtsProfile rts:updateDate="2024-11-20T15:20:19.000+09:00" rts:creationDate="2024-11-20T15:20:19.000+09:00" rts:version="0.2" rts:id="RTSystem:Nishimura Shunsei:broken clock:1.00" xmlns:rts="http://www.openrtp.org/namespaces/rts" xmlns:rtsExt="http://www.openrtp.org/namespaces/rts_ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="Judge0" rts:pathUri="localhost/note.host_cxt/Judge0.rtc" rts:id="RTC:cy22271:Category:Judge:1.0.0">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Judge0.judge">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedBooleanSeq:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedBooleanSeq:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Judge0.key">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Judge0.buttons">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShortSeq:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShortSeq:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="1000.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="1000" rtsExt:name="rate"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="name"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="346" rtsExt:x="446"/>
+        <rtsExt:Properties rtsExt:value="Judge" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="Judge" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="True/false judgment" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.0.0" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="cy22271" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="Category" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="PERIODIC" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="C++" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="compile" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="conf.default"/>
+        <rtsExt:Properties rtsExt:value="DataFlowComponent" rtsExt:name="kind"/>
+        <rtsExt:Properties rtsExt:value="Judge0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.buttons"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.judge"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.key"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Win32" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="Windows NT 10.0" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="Build 22631 " rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="x64 Intel Pentium Pro" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62182" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62182" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="1000" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%h.host_cxt/%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="note.host_cxt/Judge0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f2e60000000efe9c7d3d6700005ba0000000000000000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="OpenCVCamera0" rts:pathUri="localhost/note.host_cxt/OpenCVCamera0.rtc" rts:id="RTC:AIST:opencv-rtcs:OpenCVCamera:1.2.3">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="OpenCVCamera0.out">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/CameraImage:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/CameraImage:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default">
+            <rts:ConfigurationData rts:data="camera" rts:name="capture_mode"/>
+            <rts:ConfigurationData rts:data="0" rts:name="device_num"/>
+            <rts:ConfigurationData rts:data="video.mp4" rts:name="video_file"/>
+            <rts:ConfigurationData rts:data="" rts:name="URL"/>
+            <rts:ConfigurationData rts:data="640" rts:name="frame_width"/>
+            <rts:ConfigurationData rts:data="480" rts:name="frame_height"/>
+            <rts:ConfigurationData rts:data="30" rts:name="frame_rate"/>
+            <rts:ConfigurationData rts:data="128" rts:name="brightness"/>
+            <rts:ConfigurationData rts:data="32" rts:name="contrast"/>
+            <rts:ConfigurationData rts:data="32" rts:name="saturation"/>
+            <rts:ConfigurationData rts:data="0" rts:name="hue"/>
+            <rts:ConfigurationData rts:data="64" rts:name="gain"/>
+            <rts:ConfigurationData rts:data="auto" rts:name="exposure_mode"/>
+            <rts:ConfigurationData rts:data="166" rts:name="exposure_absolute"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__widget__">
+            <rts:ConfigurationData rts:data="radio" rts:name="capture_mode"/>
+            <rts:ConfigurationData rts:data="text" rts:name="device_num"/>
+            <rts:ConfigurationData rts:data="text" rts:name="video_file"/>
+            <rts:ConfigurationData rts:data="text" rts:name="URL"/>
+            <rts:ConfigurationData rts:data="text" rts:name="frame_width"/>
+            <rts:ConfigurationData rts:data="text" rts:name="frame_height"/>
+            <rts:ConfigurationData rts:data="text" rts:name="frame_rate"/>
+            <rts:ConfigurationData rts:data="slider.1" rts:name="brightness"/>
+            <rts:ConfigurationData rts:data="slider.1" rts:name="contrast"/>
+            <rts:ConfigurationData rts:data="slider.1" rts:name="saturation"/>
+            <rts:ConfigurationData rts:data="slider.1" rts:name="hue"/>
+            <rts:ConfigurationData rts:data="slider.1" rts:name="gain"/>
+            <rts:ConfigurationData rts:data="radio" rts:name="exposure_mode"/>
+            <rts:ConfigurationData rts:data="slider.1" rts:name="exposure_absolute"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__constraints__">
+            <rts:ConfigurationData rts:data="(camera,video,URL)" rts:name="capture_mode"/>
+            <rts:ConfigurationData rts:data="0&lt;=x&lt;=255" rts:name="brightness"/>
+            <rts:ConfigurationData rts:data="0&lt;=x&lt;=255" rts:name="contrast"/>
+            <rts:ConfigurationData rts:data="0&lt;=x&lt;=255" rts:name="saturation"/>
+            <rts:ConfigurationData rts:data="-2000&lt;=x&lt;=2000" rts:name="hue"/>
+            <rts:ConfigurationData rts:data="0&lt;=x&lt;=255" rts:name="gain"/>
+            <rts:ConfigurationData rts:data="(manual,auto)" rts:name="exposure_mode"/>
+            <rts:ConfigurationData rts:data="3&lt;=x&lt;=2047" rts:name="exposure_absolute"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__type__">
+            <rts:ConfigurationData rts:data="string" rts:name="capture_mode"/>
+            <rts:ConfigurationData rts:data="int" rts:name="device_num"/>
+            <rts:ConfigurationData rts:data="string" rts:name="video_file"/>
+            <rts:ConfigurationData rts:data="string" rts:name="URL"/>
+            <rts:ConfigurationData rts:data="int" rts:name="frame_width"/>
+            <rts:ConfigurationData rts:data="int" rts:name="frame_height"/>
+            <rts:ConfigurationData rts:data="int" rts:name="frame_rate"/>
+            <rts:ConfigurationData rts:data="int" rts:name="brightness"/>
+            <rts:ConfigurationData rts:data="int" rts:name="contrast"/>
+            <rts:ConfigurationData rts:data="int" rts:name="saturation"/>
+            <rts:ConfigurationData rts:data="int" rts:name="hue"/>
+            <rts:ConfigurationData rts:data="int" rts:name="gain"/>
+            <rts:ConfigurationData rts:data="string" rts:name="exposure_mode"/>
+            <rts:ConfigurationData rts:data="int" rts:name="exposure_absolute"/>
+        </rts:ConfigurationSets>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="1000.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="1000" rtsExt:name="rate"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="name"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="208" rtsExt:x="18"/>
+        <rtsExt:Properties rtsExt:value="OpenCVCamera" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="OpenCVCamera" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="USB Camera Acquire component" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.2.3" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="AIST" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="opencv-rtcs" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="PERIODIC" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="C++" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="compile" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="camera" rtsExt:name="conf.default.capture_mode"/>
+        <rtsExt:Properties rtsExt:value="0" rtsExt:name="conf.default.device_num"/>
+        <rtsExt:Properties rtsExt:value="video.mp4" rtsExt:name="conf.default.video_file"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="conf.default.URL"/>
+        <rtsExt:Properties rtsExt:value="640" rtsExt:name="conf.default.frame_width"/>
+        <rtsExt:Properties rtsExt:value="480" rtsExt:name="conf.default.frame_height"/>
+        <rtsExt:Properties rtsExt:value="30" rtsExt:name="conf.default.frame_rate"/>
+        <rtsExt:Properties rtsExt:value="128" rtsExt:name="conf.default.brightness"/>
+        <rtsExt:Properties rtsExt:value="32" rtsExt:name="conf.default.contrast"/>
+        <rtsExt:Properties rtsExt:value="32" rtsExt:name="conf.default.saturation"/>
+        <rtsExt:Properties rtsExt:value="0" rtsExt:name="conf.default.hue"/>
+        <rtsExt:Properties rtsExt:value="64" rtsExt:name="conf.default.gain"/>
+        <rtsExt:Properties rtsExt:value="auto" rtsExt:name="conf.default.exposure_mode"/>
+        <rtsExt:Properties rtsExt:value="166" rtsExt:name="conf.default.exposure_absolute"/>
+        <rtsExt:Properties rtsExt:value="radio" rtsExt:name="conf.__widget__.capture_mode"/>
+        <rtsExt:Properties rtsExt:value="text" rtsExt:name="conf.__widget__.device_num"/>
+        <rtsExt:Properties rtsExt:value="text" rtsExt:name="conf.__widget__.video_file"/>
+        <rtsExt:Properties rtsExt:value="text" rtsExt:name="conf.__widget__.URL"/>
+        <rtsExt:Properties rtsExt:value="text" rtsExt:name="conf.__widget__.frame_width"/>
+        <rtsExt:Properties rtsExt:value="text" rtsExt:name="conf.__widget__.frame_height"/>
+        <rtsExt:Properties rtsExt:value="text" rtsExt:name="conf.__widget__.frame_rate"/>
+        <rtsExt:Properties rtsExt:value="slider.1" rtsExt:name="conf.__widget__.brightness"/>
+        <rtsExt:Properties rtsExt:value="slider.1" rtsExt:name="conf.__widget__.contrast"/>
+        <rtsExt:Properties rtsExt:value="slider.1" rtsExt:name="conf.__widget__.saturation"/>
+        <rtsExt:Properties rtsExt:value="slider.1" rtsExt:name="conf.__widget__.hue"/>
+        <rtsExt:Properties rtsExt:value="slider.1" rtsExt:name="conf.__widget__.gain"/>
+        <rtsExt:Properties rtsExt:value="radio" rtsExt:name="conf.__widget__.exposure_mode"/>
+        <rtsExt:Properties rtsExt:value="slider.1" rtsExt:name="conf.__widget__.exposure_absolute"/>
+        <rtsExt:Properties rtsExt:value="(camera,video,URL)" rtsExt:name="conf.__constraints__.capture_mode"/>
+        <rtsExt:Properties rtsExt:value="0&lt;=x&lt;=255" rtsExt:name="conf.__constraints__.brightness"/>
+        <rtsExt:Properties rtsExt:value="0&lt;=x&lt;=255" rtsExt:name="conf.__constraints__.contrast"/>
+        <rtsExt:Properties rtsExt:value="0&lt;=x&lt;=255" rtsExt:name="conf.__constraints__.saturation"/>
+        <rtsExt:Properties rtsExt:value="-2000&lt;=x&lt;=2000" rtsExt:name="conf.__constraints__.hue"/>
+        <rtsExt:Properties rtsExt:value="0&lt;=x&lt;=255" rtsExt:name="conf.__constraints__.gain"/>
+        <rtsExt:Properties rtsExt:value="(manual,auto)" rtsExt:name="conf.__constraints__.exposure_mode"/>
+        <rtsExt:Properties rtsExt:value="3&lt;=x&lt;=2047" rtsExt:name="conf.__constraints__.exposure_absolute"/>
+        <rtsExt:Properties rtsExt:value="string" rtsExt:name="conf.__type__.capture_mode"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.device_num"/>
+        <rtsExt:Properties rtsExt:value="string" rtsExt:name="conf.__type__.video_file"/>
+        <rtsExt:Properties rtsExt:value="string" rtsExt:name="conf.__type__.URL"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.frame_width"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.frame_height"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.frame_rate"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.brightness"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.contrast"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.saturation"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.hue"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.gain"/>
+        <rtsExt:Properties rtsExt:value="string" rtsExt:name="conf.__type__.exposure_mode"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.exposure_absolute"/>
+        <rtsExt:Properties rtsExt:value="DataFlowComponent" rtsExt:name="kind"/>
+        <rtsExt:Properties rtsExt:value="OpenCVCamera0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.out"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Win32" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="Windows NT 10.0" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="Build 22631 " rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="x64 Intel Pentium Pro" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62265" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62265" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="1000" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="NO" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%h.host_cxt/%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="note.host_cxt/OpenCVCamera0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f3390000000efeb67d3d670000556c000000000000000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="OperateTime0" rts:pathUri="localhost/note.host_cxt/OperateTime0.rtc" rts:id="RTC:cy22271:Category:OperateTime:1.0.0">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="OperateTime0.operation">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="OperateTime0.button">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="1000.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="1000" rtsExt:name="rate"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="name"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="302" rtsExt:x="672"/>
+        <rtsExt:Properties rtsExt:value="OperateTime" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="OperateTime" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="operation of time from the bottons" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.0.0" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="cy22271" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="Category" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="PERIODIC" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="C++" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="compile" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="conf.default"/>
+        <rtsExt:Properties rtsExt:value="DataFlowComponent" rtsExt:name="kind"/>
+        <rtsExt:Properties rtsExt:value="OperateTime0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.button"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.operation"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Win32" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="Windows NT 10.0" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="Build 22631 " rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="x64 Intel Pentium Pro" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62185" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62185" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="1000" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%h.host_cxt/%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="note.host_cxt/OperateTime0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f2e90000000efe9d7d3d6700005680000000000000000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="Plot0" rts:pathUri="localhost/note.host_cxt/Plot0.rtc" rts:id="RTC:cy22271:Category:Plot:1.0.0">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Plot0.buttons">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShortSeq:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShortSeq:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Plot0.judge">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedBooleanSeq:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedBooleanSeq:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="1000.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="1000" rtsExt:name="rate"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="name"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="262" rtsExt:x="444"/>
+        <rtsExt:Properties rtsExt:value="Plot" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="Plot" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="Plot sheet music" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.0.0" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="cy22271" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="Category" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="PERIODIC" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="C++" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="compile" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="conf.default"/>
+        <rtsExt:Properties rtsExt:value="DataFlowComponent" rtsExt:name="kind"/>
+        <rtsExt:Properties rtsExt:value="Plot0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.buttons"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.judge"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Win32" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="Windows NT 10.0" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="Build 22631 " rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="x64 Intel Pentium Pro" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62188" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62188" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="1000" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%h.host_cxt/%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="note.host_cxt/Plot0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f2ec0000000efe9d7d3d6700003bb0000000000000000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="PlotTime0" rts:pathUri="localhost/note.host_cxt/PlotTime0.rtc" rts:id="RTC:cy22271:Category:PlotTime:1.0.0">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="PlotTime0.time">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="PlotTime0.situation">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="1000.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="1000" rtsExt:name="rate"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="name"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="279" rtsExt:x="1115"/>
+        <rtsExt:Properties rtsExt:value="PlotTime" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="PlotTime" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="plot time on 7 segment" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.0.0" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="cy22271" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="Category" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="PERIODIC" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="C++" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="compile" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="conf.default"/>
+        <rtsExt:Properties rtsExt:value="DataFlowComponent" rtsExt:name="kind"/>
+        <rtsExt:Properties rtsExt:value="PlotTime0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.time"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.situation"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Win32" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="Windows NT 10.0" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="Build 22631 " rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="x64 Intel Pentium Pro" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62191" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62191" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="1000" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%h.host_cxt/%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="note.host_cxt/PlotTime0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f2ef0000000efe9d7d3d6700001594000000000000000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="QR_recognition0" rts:pathUri="localhost/note.host_cxt/QR_recognition0.rtc" rts:id="RTC:ONDA Daiki:Category:QR_recognition:1.0.0">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="QR_recognition0.Str">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedString:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedString:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="QR_recognition0.Img">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/CameraImage:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/CameraImage:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="1000.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="1000.0" rtsExt:name="rate"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="187" rtsExt:x="132"/>
+        <rtsExt:Properties rtsExt:value="QR_recognition" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="QR_recognition" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="ModuleDescription" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.0.0" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="ONDA Daiki" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="Category" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="COMMUTATIVE" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="Python" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="SCRIPT" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="conf.default"/>
+        <rtsExt:Properties rtsExt:value="QR_recognition0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.dataport"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Windows" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="11" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="10.0.22631" rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="AMD64" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62194" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62194" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="1000.0" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%h.host_cxt/%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="note.host_cxt/QR_recognition0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="IDL:OpenRTM/ComponentObserver:1.0" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="QR_recognition.conf" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f2f20000000efe9e7d3d6700003484000000000100000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="RepairManagement0" rts:pathUri="localhost/note.host_cxt/RepairManagement0.rtc" rts:id="RTC:ONDA Daiki:Category:RepairManagement:1.0.0">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="RepairManagement0.Status">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="RepairManagement0.Mystery_num">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="1000.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="1000.0" rtsExt:name="rate"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="116" rtsExt:x="553"/>
+        <rtsExt:Properties rtsExt:value="RepairManagement" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="RepairManagement" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="ModuleDescription" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.0.0" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="ONDA Daiki" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="Category" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="STATIC" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="Python" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="SCRIPT" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="conf.default"/>
+        <rtsExt:Properties rtsExt:value="RepairManagement0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.dataport"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Windows" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="11" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="10.0.22631" rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="AMD64" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62197" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62197" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="1000.0" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%h.host_cxt/%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="note.host_cxt/RepairManagement0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="IDL:OpenRTM/ComponentObserver:1.0" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="RepairManagement.conf" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f2f50000000efe9e7d3d670000637c000000000100000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="SignalManager0" rts:pathUri="localhost/note.host_cxt/SignalManager0.rtc" rts:id="RTC:VenderName:Category:SignalManager:1.0.1">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="SignalManager0.Retention">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="SignalManager0.TimeOperation">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="SignalManager0.Signal1">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="SignalManager0.Signal2">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="1000.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="1000.0" rtsExt:name="rate"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="423" rtsExt:x="816"/>
+        <rtsExt:Properties rtsExt:value="SignalManager" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="SignalManager" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="ModuleDescription" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.0.1" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="VenderName" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="Category" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="STATIC" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="Python" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="SCRIPT" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="conf.default"/>
+        <rtsExt:Properties rtsExt:value="SignalManager0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.dataport"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Windows" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="11" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="10.0.22631" rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="AMD64" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62204" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62204" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="1000.0" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%h.host_cxt/%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="note.host_cxt/SignalManager0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="IDL:OpenRTM/ComponentObserver:1.0" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="SignalManager.conf" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f2fc0000000efe9f7d3d6700002f64000000000100000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="StringCompare0" rts:pathUri="localhost/note.host_cxt/StringCompare0.rtc" rts:id="RTC:VenderName:string compare:StringCompare:1.0.0">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="StringCompare0.StringCompareOut">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="StringCompare0.StringCompareIn">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedString:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="push,pull" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.corba_cdr"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.data_service"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.direct"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="dataport.interface_option.shared_memory"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedString:1.0" rtsExt:name="data_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default">
+            <rts:ConfigurationData rts:data="ABC" rts:name="CompareString"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__widget__">
+            <rts:ConfigurationData rts:data="text" rts:name="CompareString"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__type__">
+            <rts:ConfigurationData rts:data="string" rts:name="CompareString"/>
+        </rts:ConfigurationSets>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="1000.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="1000" rtsExt:name="rate"/>
+            <rtsExt:Properties rtsExt:value="" rtsExt:name="name"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="193" rtsExt:x="281"/>
+        <rtsExt:Properties rtsExt:value="StringCompare" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="StringCompare" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="QRR[hðÇÝæÁ½ÛÉçêÄ­éf[^ðó¯æéB" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.0.0" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="VenderName" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="string compare" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="PERIODIC" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="C++" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="compile" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="ABC" rtsExt:name="conf.default.CompareString"/>
+        <rtsExt:Properties rtsExt:value="text" rtsExt:name="conf.__widget__.CompareString"/>
+        <rtsExt:Properties rtsExt:value="string" rtsExt:name="conf.__type__.CompareString"/>
+        <rtsExt:Properties rtsExt:value="DataFlowComponent" rtsExt:name="kind"/>
+        <rtsExt:Properties rtsExt:value="StringCompare0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.StringCompareIn"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.StringCompareOut"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Win32" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="Windows NT 10.0" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="Build 22631 " rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="x64 Intel Pentium Pro" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62232" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62232" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="1000" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%h.host_cxt/%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="note.host_cxt/StringCompare0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f3180000000efea47d3d6700006a40000000000000000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="Temporary_time0" rts:pathUri="localhost/note.host_cxt/Temporary_time0.rtc" rts:id="RTC:ONDA Daiki:Category:Temporary_time:1.0.0">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Temporary_time0.Time">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Temporary_time0.Status">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Temporary_time0.Time_quantity">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default">
+            <rts:ConfigurationData rts:data="0" rts:name="StartTime"/>
+            <rts:ConfigurationData rts:data="3" rts:name="ChippedTime1"/>
+            <rts:ConfigurationData rts:data="5" rts:name="ChippedTime2"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__widget__">
+            <rts:ConfigurationData rts:data="text" rts:name="StartTime"/>
+            <rts:ConfigurationData rts:data="text" rts:name="ChippedTime1"/>
+            <rts:ConfigurationData rts:data="checkbox" rts:name="ChippedTime2"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__type__">
+            <rts:ConfigurationData rts:data="int" rts:name="StartTime"/>
+            <rts:ConfigurationData rts:data="int" rts:name="ChippedTime1"/>
+            <rts:ConfigurationData rts:data="int" rts:name="ChippedTime2"/>
+        </rts:ConfigurationSets>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="20.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="20.0" rtsExt:name="rate"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="136" rtsExt:x="784"/>
+        <rtsExt:Properties rtsExt:value="Temporary_time" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="Temporary_time" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="ModuleDescription" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.0.0" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="ONDA Daiki" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="Category" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="STATIC" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="Python" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="SCRIPT" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="0" rtsExt:name="conf.default.StartTime"/>
+        <rtsExt:Properties rtsExt:value="3" rtsExt:name="conf.default.ChippedTime1"/>
+        <rtsExt:Properties rtsExt:value="5" rtsExt:name="conf.default.ChippedTime2"/>
+        <rtsExt:Properties rtsExt:value="text" rtsExt:name="conf.__widget__.StartTime"/>
+        <rtsExt:Properties rtsExt:value="text" rtsExt:name="conf.__widget__.ChippedTime1"/>
+        <rtsExt:Properties rtsExt:value="checkbox" rtsExt:name="conf.__widget__.ChippedTime2"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.StartTime"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.ChippedTime1"/>
+        <rtsExt:Properties rtsExt:value="int" rtsExt:name="conf.__type__.ChippedTime2"/>
+        <rtsExt:Properties rtsExt:value="Temporary_time0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.dataport"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Windows" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="11" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="10.0.22631" rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="AMD64" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62208" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62208" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="20.0" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%h.host_cxt/%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="note.host_cxt/Temporary_time0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="IDL:OpenRTM/ComponentObserver:1.0" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="Temporary_time.conf" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f3000000000efe9f7d3d6700003630000000000100000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="Time_comparison0" rts:pathUri="localhost/note.host_cxt/Time_comparison0.rtc" rts:id="RTC:ONDA Daiki:Category:Time_comparison:1.0.0">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Time_comparison0.ComparisonResult">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Time_comparison0.TTime">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Time_comparison0.Status">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="1000.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="1000.0" rtsExt:name="rate"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="221" rtsExt:x="882"/>
+        <rtsExt:Properties rtsExt:value="Time_comparison" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="Time_comparison" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="ModuleDescription" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.0.0" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="ONDA Daiki" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="Category" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="STATIC" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="Python" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="SCRIPT" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="conf.default"/>
+        <rtsExt:Properties rtsExt:value="Time_comparison0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.dataport"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Windows" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="11" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="10.0.22631" rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="AMD64" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62212" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62212" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="1000.0" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%h.host_cxt/%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="note.host_cxt/Time_comparison0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="IDL:OpenRTM/ComponentObserver:1.0" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="Time_comparison.conf" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f3040000000efe9f7d3d67000016fc000000000100000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:isRequired="true" rts:compositeType="None" rts:activeConfigurationSet="default" rts:instanceName="Retention0" rts:pathUri="localhost/Retention0.rtc" rts:id="RTC:Nishimura Shunsei:Category:Retention:1.0.0">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Retention0.Music">
+            <rtsExt:Properties rtsExt:value="DataOutPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShortSeq:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="block,flush,new,nonblock,periodic" rtsExt:name="dataport.io_mode"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShortSeq:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="Retention0.MusicalScale">
+            <rtsExt:Properties rtsExt:value="DataInPort" rtsExt:name="port.port_type"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+            <rtsExt:Properties rtsExt:value="Any" rtsExt:name="dataport.subscription_type"/>
+            <rtsExt:Properties rtsExt:value="cdr" rtsExt:name="dataport.marshaling_types"/>
+            <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="data_type"/>
+            <rtsExt:Properties rtsExt:value="push,pull,duplex" rtsExt:name="dataport.dataflow_type"/>
+            <rtsExt:Properties rtsExt:value="corba_cdr,csp_channel,data_service,direct,shared_memory" rtsExt:name="dataport.interface_type"/>
+        </rts:DataPorts>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:rate="1000.0" rts:kind="PERIODIC" rts:id="0">
+            <rtsExt:Properties rtsExt:value="YES" rtsExt:name="sync_transition"/>
+            <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="transition_timeout"/>
+            <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="type"/>
+            <rtsExt:Properties rtsExt:value="1000.0" rtsExt:name="rate"/>
+        </rts:ExecutionContexts>
+        <rtsExt:Location rtsExt:direction="RIGHT" rtsExt:width="-1" rtsExt:height="-1" rtsExt:y="348" rtsExt:x="275"/>
+        <rtsExt:Properties rtsExt:value="Retention" rtsExt:name="implementation_id"/>
+        <rtsExt:Properties rtsExt:value="Retention" rtsExt:name="type_name"/>
+        <rtsExt:Properties rtsExt:value="ModuleDescription" rtsExt:name="description"/>
+        <rtsExt:Properties rtsExt:value="1.0.0" rtsExt:name="version"/>
+        <rtsExt:Properties rtsExt:value="Nishimura Shunsei" rtsExt:name="vendor"/>
+        <rtsExt:Properties rtsExt:value="Category" rtsExt:name="category"/>
+        <rtsExt:Properties rtsExt:value="STATIC" rtsExt:name="activity_type"/>
+        <rtsExt:Properties rtsExt:value="1" rtsExt:name="max_instance"/>
+        <rtsExt:Properties rtsExt:value="Python" rtsExt:name="language"/>
+        <rtsExt:Properties rtsExt:value="SCRIPT" rtsExt:name="lang_type"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="conf.default"/>
+        <rtsExt:Properties rtsExt:value="Retention0" rtsExt:name="instance_name"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.inport.dataport"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="port.outport.dataport"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="config.version"/>
+        <rtsExt:Properties rtsExt:value="OpenRTM-aist-2.0.2" rtsExt:name="openrtm.name"/>
+        <rtsExt:Properties rtsExt:value="2.0.2" rtsExt:name="openrtm.version"/>
+        <rtsExt:Properties rtsExt:value="Windows" rtsExt:name="os.name"/>
+        <rtsExt:Properties rtsExt:value="11" rtsExt:name="os.release"/>
+        <rtsExt:Properties rtsExt:value="10.0.22631" rtsExt:name="os.version"/>
+        <rtsExt:Properties rtsExt:value="AMD64" rtsExt:name="os.arch"/>
+        <rtsExt:Properties rtsExt:value="note" rtsExt:name="os.hostname"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62200" rtsExt:name="corba.endpoints"/>
+        <rtsExt:Properties rtsExt:value="172.31.25.213:62200" rtsExt:name="corba.endpoints_ipv4"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="corba.endpoints_ipv6"/>
+        <rtsExt:Properties rtsExt:value="omniORB" rtsExt:name="corba.id"/>
+        <rtsExt:Properties rtsExt:value="PeriodicExecutionContext" rtsExt:name="exec_cxt.periodic.type"/>
+        <rtsExt:Properties rtsExt:value="1000.0" rtsExt:name="exec_cxt.periodic.rate"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="exec_cxt.sync_transition"/>
+        <rtsExt:Properties rtsExt:value="0.5" rtsExt:name="exec_cxt.transition_timeout"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="logger.enable"/>
+        <rtsExt:Properties rtsExt:value="INFO" rtsExt:name="logger.log_level"/>
+        <rtsExt:Properties rtsExt:value="YES" rtsExt:name="naming.enable"/>
+        <rtsExt:Properties rtsExt:value="corba" rtsExt:name="naming.type"/>
+        <rtsExt:Properties rtsExt:value="%n.rtc" rtsExt:name="naming.formats"/>
+        <rtsExt:Properties rtsExt:value="Retention0.rtc" rtsExt:name="naming.names"/>
+        <rtsExt:Properties rtsExt:value="IDL:OpenRTM/ComponentObserver:1.0" rtsExt:name="sdo.service.consumer.available_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.consumer.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="ALL" rtsExt:name="sdo.service.provider.enabled_services"/>
+        <rtsExt:Properties rtsExt:value="" rtsExt:name="sdo.service.provider.available_services"/>
+        <rtsExt:Properties rtsExt:value="manager" rtsExt:name="manager.instance_name"/>
+        <rtsExt:Properties rtsExt:value="Retention.conf" rtsExt:name="config_file"/>
+        <rtsExt:Properties rtsExt:value="IOR:000000000000003549444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000000000010000000000000064000102000000000e3137322e33312e32352e32313300f2f80000000efe9e7d3d6700004d80000000000100000000000200000000000000080000000041545400000000010000001c00000000000100010000000105010001000101090000000100010109" rtsExt:name="IOR"/>
+    </rts:Components>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedBooleanSeq:1.0" rts:name="Judge0.judge_Plot0.judge" rts:connectorId="6d154fed-288b-484a-9c82-1c40aad2fb44">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Judge0.judge" rts:instanceName="Judge0" rts:componentId="RTC:cy22271:Category:Judge:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Judge0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Plot0.judge" rts:instanceName="Plot0" rts:componentId="RTC:cy22271:Category:Plot:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Plot0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedBooleanSeq:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e3000000001000000000000006c000000010102000e0000003137322e33312e32352e32313300ecf217000000ff73686f7274637574fe9d7d3d6701003bb00000000000000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="Judge0.key_RepairManagement0.Mystery_num" rts:connectorId="b4aa36bf-a7b4-43ed-9ede-047ff80d43fb">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Judge0.key" rts:instanceName="Judge0" rts:componentId="RTC:cy22271:Category:Judge:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Judge0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="RepairManagement0.Mystery_num" rts:instanceName="RepairManagement0" rts:componentId="RTC:ONDA Daiki:Category:RepairManagement:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/RepairManagement0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.inport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e30000000010000000000000064000000010102000e0000003137322e33312e32352e32313300f5f20e000000fe9e7d3d670000637c000000000600000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="Judge0.key_SignalManager0.Signal2" rts:connectorId="ca533ab6-4f74-4739-a971-91c81c920b16">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Judge0.key" rts:instanceName="Judge0" rts:componentId="RTC:cy22271:Category:Judge:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Judge0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="SignalManager0.Signal2" rts:instanceName="SignalManager0" rts:componentId="RTC:VenderName:Category:SignalManager:1.0.1">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/SignalManager0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.inport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e30000000010000000000000064000000010102000e0000003137322e33312e32352e32313300fcf20e000000fe9f7d3d6700002f64000000000700000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShortSeq:1.0" rts:name="Retention0.Music_Judge0.buttons" rts:connectorId="eb9f7ba7-a706-11ef-9d1e-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Retention0.Music" rts:instanceName="Retention0" rts:componentId="RTC:Nishimura Shunsei:Category:Retention:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/Retention0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Judge0.buttons" rts:instanceName="Judge0" rts:componentId="RTC:cy22271:Category:Judge:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Judge0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShortSeq:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShortSeq:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e3000000001000000000000006c000000010102000e0000003137322e33312e32352e32313300e6f217000000ff73686f7274637574fe9c7d3d6701005ba00000000000000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/CameraImage:1.0" rts:name="OpenCVCamera0.out_QR_recognition0.Img" rts:connectorId="540d42cb-70e2-4a26-9592-7c8d985618e6">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="OpenCVCamera0.out" rts:instanceName="OpenCVCamera0" rts:componentId="RTC:AIST:opencv-rtcs:OpenCVCamera:1.2.3">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/OpenCVCamera0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="QR_recognition0.Img" rts:instanceName="QR_recognition0" rts:componentId="RTC:ONDA Daiki:Category:QR_recognition:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/QR_recognition0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/CameraImage:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/CameraImage:1.0" rtsExt:name="dataport.inport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e30000000010000000000000064000000010102000e0000003137322e33312e32352e32313300f2f20e000000fe9e7d3d6700003484000000000500000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="Temporary_time0.Time_quantity_OperateTime0.operation" rts:connectorId="1c5b06d6-a707-11ef-84ef-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Temporary_time0.Time_quantity" rts:instanceName="Temporary_time0" rts:componentId="RTC:ONDA Daiki:Category:Temporary_time:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Temporary_time0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="OperateTime0.operation" rts:instanceName="OperateTime0" rts:componentId="RTC:cy22271:Category:OperateTime:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/OperateTime0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.inport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e30000000010000000000000064000000010102000e0000003137322e33312e32352e3231330000f30e000000fe9f7d3d6700003630000000000700000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="SignalManager0.TimeOperation_OperateTime0.button" rts:connectorId="3561fb98-a707-11ef-8d02-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="SignalManager0.TimeOperation" rts:instanceName="SignalManager0" rts:componentId="RTC:VenderName:Category:SignalManager:1.0.1">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/SignalManager0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="OperateTime0.button" rts:instanceName="OperateTime0" rts:componentId="RTC:cy22271:Category:OperateTime:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/OperateTime0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e3000000001000000000000006c000000010102000e0000003137322e33312e32352e32313300e9f217000000ff73686f7274637574fe9d7d3d67010056800000000000000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShortSeq:1.0" rts:name="Retention0.Music_Plot0.buttons" rts:connectorId="f69ad22d-a706-11ef-919a-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Retention0.Music" rts:instanceName="Retention0" rts:componentId="RTC:Nishimura Shunsei:Category:Retention:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/Retention0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Plot0.buttons" rts:instanceName="Plot0" rts:componentId="RTC:cy22271:Category:Plot:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Plot0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShortSeq:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShortSeq:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e3000000001000000000000006c000000010102000e0000003137322e33312e32352e32313300ecf217000000ff73686f7274637574fe9d7d3d6701003bb00000000001000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="PlotTime0.time_Temporary_time0.Time" rts:connectorId="301ae54b-c76d-4a97-b2fd-2f04a07908c6">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="PlotTime0.time" rts:instanceName="PlotTime0" rts:componentId="RTC:cy22271:Category:PlotTime:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/PlotTime0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Temporary_time0.Time" rts:instanceName="Temporary_time0" rts:componentId="RTC:ONDA Daiki:Category:Temporary_time:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Temporary_time0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e3000000001000000000000006c000000010102000e0000003137322e33312e32352e32313300eff217000000ff73686f7274637574fe9d7d3d67010015940000000000000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:value="&lt;OpenRTM._objref_InPortCdr object at 0x0000014117AED850&gt;" rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="RepairManagement0.Status_PlotTime0.situation" rts:connectorId="473a2ef8-a707-11ef-bf4b-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="RepairManagement0.Status" rts:instanceName="RepairManagement0" rts:componentId="RTC:ONDA Daiki:Category:RepairManagement:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/RepairManagement0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="PlotTime0.situation" rts:instanceName="PlotTime0" rts:componentId="RTC:cy22271:Category:PlotTime:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/PlotTime0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e3000000001000000000000006c000000010102000e0000003137322e33312e32352e32313300eff217000000ff73686f7274637574fe9d7d3d67010015940000000001000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedString:1.0" rts:name="QR_recognition0.Str_StringCompare0.StringCompareIn" rts:connectorId="995db635-a706-11ef-a166-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="QR_recognition0.Str" rts:instanceName="QR_recognition0" rts:componentId="RTC:ONDA Daiki:Category:QR_recognition:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/QR_recognition0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="StringCompare0.StringCompareIn" rts:instanceName="StringCompare0" rts:componentId="RTC:VenderName:string compare:StringCompare:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/StringCompare0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedString:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedString:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e3000000001000000000000006c000000010102000e0000003137322e33312e32352e3231330018f317000000ff73686f7274637574fea47d3d6701006a400000000000000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="RepairManagement0.Status_Temporary_time0.Status" rts:connectorId="0a0d2b30-a707-11ef-88b1-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="RepairManagement0.Status" rts:instanceName="RepairManagement0" rts:componentId="RTC:ONDA Daiki:Category:RepairManagement:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/RepairManagement0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Temporary_time0.Status" rts:instanceName="Temporary_time0" rts:componentId="RTC:ONDA Daiki:Category:Temporary_time:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Temporary_time0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.inport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e30000000010000000000000064000000010102000e0000003137322e33312e32352e3231330000f30e000000fe9f7d3d6700003630000000000600000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="RepairManagement0.Status_Time_comparison0.Status" rts:connectorId="0d407e51-a707-11ef-9c4a-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="RepairManagement0.Status" rts:instanceName="RepairManagement0" rts:componentId="RTC:ONDA Daiki:Category:RepairManagement:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/RepairManagement0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Time_comparison0.Status" rts:instanceName="Time_comparison0" rts:componentId="RTC:ONDA Daiki:Category:Time_comparison:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Time_comparison0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.inport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e30000000010000000000000064000000010102000e0000003137322e33312e32352e3231330004f30e000000fe9f7d3d67000016fc000000000600000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="SignalManager0.Signal1_RepairManagement0.Status" rts:connectorId="4e12c3f1-a707-11ef-84cc-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="SignalManager0.Signal1" rts:instanceName="SignalManager0" rts:componentId="RTC:VenderName:Category:SignalManager:1.0.1">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/SignalManager0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="RepairManagement0.Status" rts:instanceName="RepairManagement0" rts:componentId="RTC:ONDA Daiki:Category:RepairManagement:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/RepairManagement0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.inport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e30000000010000000000000064000000010102000e0000003137322e33312e32352e32313300fcf20e000000fe9f7d3d6700002f64000000000900000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:value="&lt;OpenRTM._objref_InPortCdr object at 0x0000014DA6107410&gt;" rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="StringCompare0.StringCompareOut_RepairManagement0.Mystery_num" rts:connectorId="7b9d2dd6-db42-4198-a6a8-6b0298c6e954">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="StringCompare0.StringCompareOut" rts:instanceName="StringCompare0" rts:componentId="RTC:VenderName:string compare:StringCompare:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/StringCompare0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="RepairManagement0.Mystery_num" rts:instanceName="RepairManagement0" rts:componentId="RTC:ONDA Daiki:Category:RepairManagement:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/RepairManagement0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.inport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e30000000010000000000000064000000010102000e0000003137322e33312e32352e32313300f5f20e000000fe9e7d3d670000637c000000000500000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="SignalManager0.Retention_Retention0.MusicalScale" rts:connectorId="e038c2b5-a706-11ef-a01f-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="SignalManager0.Retention" rts:instanceName="SignalManager0" rts:componentId="RTC:VenderName:Category:SignalManager:1.0.1">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/SignalManager0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Retention0.MusicalScale" rts:instanceName="Retention0" rts:componentId="RTC:Nishimura Shunsei:Category:Retention:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/Retention0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.inport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e30000000010000000000000064000000010102000e0000003137322e33312e32352e32313300f8f20e000000fe9e7d3d6700004d80000000000500000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="SignalManager0.Signal1_Time_comparison0.ComparisonResult" rts:connectorId="3d062c0b-a707-11ef-946d-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="SignalManager0.Signal1" rts:instanceName="SignalManager0" rts:componentId="RTC:VenderName:Category:SignalManager:1.0.1">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/SignalManager0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Time_comparison0.ComparisonResult" rts:instanceName="Time_comparison0" rts:componentId="RTC:ONDA Daiki:Category:Time_comparison:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Time_comparison0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.inport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e30000000010000000000000064000000010102000e0000003137322e33312e32352e32313300fcf20e000000fe9f7d3d6700002f64000000000800000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:value="&lt;OpenRTM._objref_InPortCdr object at 0x000001F76AFE8E00&gt;" rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:subscriptionType="flush" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:dataType="IDL:RTC/TimedShort:1.0" rts:name="Time_comparison0.TTime_Temporary_time0.Time" rts:connectorId="100efa98-a707-11ef-9948-ce599793f12b">
+        <rts:sourceDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Time_comparison0.TTime" rts:instanceName="Time_comparison0" rts:componentId="RTC:ONDA Daiki:Category:Time_comparison:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Time_comparison0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort xsi:type="rtsExt:target_port_ext" rts:portName="Temporary_time0.Time" rts:instanceName="Temporary_time0" rts:componentId="RTC:ONDA Daiki:Category:Temporary_time:1.0.0">
+            <rtsExt:Properties rtsExt:value="localhost/note.host_cxt/Temporary_time0.rtc" rtsExt:name="COMPONENT_PATH_ID"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:value="all" rtsExt:name="dataport.publisher.push_policy"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.outport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.outport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.outport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.outport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="8" rtsExt:name="dataport.inport.buffer.length"/>
+        <rtsExt:Properties rtsExt:value="overwrite" rtsExt:name="dataport.inport.buffer.write.full_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.write.timeout"/>
+        <rtsExt:Properties rtsExt:value="readback" rtsExt:name="dataport.inport.buffer.read.empty_policy"/>
+        <rtsExt:Properties rtsExt:value="1.0" rtsExt:name="dataport.inport.buffer.read.timeout"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.data_type"/>
+        <rtsExt:Properties rtsExt:value="corba_cdr" rtsExt:name="dataport.interface_type"/>
+        <rtsExt:Properties rtsExt:value="push" rtsExt:name="dataport.dataflow_type"/>
+        <rtsExt:Properties rtsExt:value="flush" rtsExt:name="dataport.subscription_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.outport.data_type"/>
+        <rtsExt:Properties rtsExt:value="IDL:RTC/TimedShort:1.0" rtsExt:name="dataport.inport.data_type"/>
+        <rtsExt:Properties rtsExt:value="little,big" rtsExt:name="dataport.serializer.cdr.endian"/>
+        <rtsExt:Properties rtsExt:value="IOR:010000001a00000049444c3a4f70656e52544d2f496e506f72744364723a312e30000000010000000000000064000000010102000e0000003137322e33312e32352e3231330004f30e000000fe9f7d3d67000016fc000000000700000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100" rtsExt:name="dataport.corba_cdr.inport_ior"/>
+        <rtsExt:Properties rtsExt:value="&lt;OpenRTM._objref_InPortCdr object at 0x0000014117ADFE30&gt;" rtsExt:name="dataport.corba_cdr.inport_ref"/>
+    </rts:DataPortConnectors>
+    <rtsExt:Properties rtsExt:name="rtse.ectab.show"/>
+    <rtsExt:Properties rtsExt:name="rtse.ecconn.show"/>
+    <rtsExt:Properties rtsExt:value="{ }" rtsExt:name="rtse.ecconn.bendpoints"/>
+</rts:RtsProfile>
+

@@ -1,0 +1,116 @@
+﻿import sys
+import time
+import serial  # シリアル通信用
+sys.path.append(".")
+
+# Import RTM module
+import RTC
+import OpenRTM_aist
+
+# モジュール仕様
+motor_spec = ["implementation_id", "Motor",
+              "type_name", "Motor",
+              "description", "ModuleDescription",
+              "version", "1.0.0",
+              "vendor", "Nishimura Shunsei",
+              "category", "Category",
+              "activity_type", "STATIC",
+              "max_instance", "1",
+              "language", "Python",
+              "lang_type", "SCRIPT",
+              ""]
+
+
+class Motor(OpenRTM_aist.DataFlowComponentBase):
+    def __init__(self, manager):
+        OpenRTM_aist.DataFlowComponentBase.__init__(self, manager)
+
+        # TimedBoolean型のInPort
+        self._d_Signal = OpenRTM_aist.instantiateDataType(RTC.TimedBoolean)
+        self._SignalIn = OpenRTM_aist.InPort("Signal", self._d_Signal)
+        self.addInPort("Signal", self._SignalIn)
+
+        # シリアルポートの設定
+        try:
+            self.serialPort = serial.Serial('COM4', 9600, timeout=1)
+            print("Connected to Arduino on COM4.")
+        except serial.SerialException as e:
+            print(f"Error opening COM4: {e}")
+            self.serialPort = None
+
+    def onInitialize(self):
+        # InPortを初期化
+        return RTC.RTC_OK
+
+    def onActivated(self, ec_id):
+        # 初期値として4をArduinoに送信
+        if self.serialPort and self.serialPort.is_open:
+            self.serialPort.write(b'4')
+            print("Sent initial value (4) to Arduino.")
+        else:
+            print("Serial port not available.")
+        return RTC.RTC_OK
+
+    def onExecute(self, ec_id):
+        # InPortに新しいデータが来たか確認
+        if self._SignalIn.isNew():
+            # データを読み込む
+            self._d_Signal = self._SignalIn.read()
+
+            # Access the data part of the TimedBooleanSeq
+            signal_data = self._d_Signal.data
+        
+            # デバッグ用: 受信したデータを表示
+            print(f"Received Boolean: {signal_data}")
+
+            # Boolean値に基づいてArduinoに送信
+            if self.serialPort and self.serialPort.is_open:
+                if signal_data == True:  # Trueなら4を送信
+                    self.serialPort.write(b'4')
+                    print("Sent to Arduino: 4")
+                elif signal_data == False:  # Falseなら5を送信
+                    self.serialPort.write(b'5')
+                    print("Sent to Arduino: 5")
+                else:
+                    print(f"Unexpected data value: {signal_data}")
+            else:
+                print("Serial port not available.")
+        return RTC.RTC_OK
+
+
+
+def MotorInit(manager):
+    profile = OpenRTM_aist.Properties(defaults_str=motor_spec)
+    manager.registerFactory(profile,
+                            Motor,
+                            OpenRTM_aist.Delete)
+
+
+def MyModuleInit(manager):
+    MotorInit(manager)
+
+    # create instance_name option for createComponent()
+    instance_name = [i for i in sys.argv if "--instance_name=" in i]
+    if instance_name:
+        args = instance_name[0].replace("--", "?")
+    else:
+        args = ""
+
+    # Create a component
+    comp = manager.createComponent("Motor" + args)
+
+
+def main():
+    # remove --instance_name= option
+    argv = [i for i in sys.argv if not "--instance_name=" in i]
+    # Initialize manager
+    mgr = OpenRTM_aist.Manager.init(argv)
+    mgr.setModuleInitProc(MyModuleInit)
+    mgr.activateManager()
+    mgr.runManager()
+
+
+if __name__ == "__main__":
+    main()
+
+
